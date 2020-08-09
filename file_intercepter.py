@@ -10,7 +10,11 @@ import scapy.all as scapy
 
 ack_list = []
 
-
+def banner():
+    print("TOOL IS CREATED BY KRISNA PRANAV")
+    print("Github Link https://www.github.com/krishpranav")
+    print("Do Not Forget To Follow Me")
+        
 def set_load(packet, load):
     scapy_packet[scapy.Raw].load = load
     del scapy_packet[scapy.IP].len
@@ -39,3 +43,5 @@ def process_packet(packet):
 queue = netfilterqueue.Netfilterqueue()
 queue.bind(0, process_packet)
 queue.run()
+
+banner()
